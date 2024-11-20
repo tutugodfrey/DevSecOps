@@ -22,6 +22,6 @@ http://external_ip:NodePort
 Get Jenkins initial admin Password
 
 ```bash
-printf $(kubectl get secret --namespace ci jenkins -o jsonpath="{ .data.jenkins-admin-passowrd}" | base64 -decode); echo
+printf $(kubectl get secret --namespace ci jenkins -ojsonpath="{.data.jenkins-admin-password}" | base64 --decode); echo
 ```
 

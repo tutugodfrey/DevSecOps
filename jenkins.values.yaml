@@ -7,3 +7,33 @@ controller:
     limits:
       cpu: 2000m
       memory: 4096Mi
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    hostName:
+      - host: ci.dev.compliantcloud.comx
+    paths:
+    - backend:
+        serviceName: >-
+          {{ template "jenkins.fullname" . }}
+        servicePort: 8080
+    tls:
+      - secretName: ci.dev.compliantcloud.com
+        hosts:
+          - ci.dev.compliantcloud.com
+  # nodeSelector:
+  #   kubernetes.io/os: linux
+  # tolerations:
+  #   - key: CriticalAddonsOnly
+  #     operator: Exists
+  #   - key: node-role.kubernetes.io/master
+  #     effect: NoSchedule
+  # affinity:
+  #   nodeAffinity:
+  #     requiredDuringSchedulingIgnoredDuringExecution:
+  #       nodeSelectorTerms:
+  #         - matchExpressions:
+  #             - key: node-role.kubernetes.io/control-plane
+  #               operator: Exists

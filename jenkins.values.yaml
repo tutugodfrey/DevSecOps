@@ -18,6 +18,8 @@ controller:
         serviceName: >-
           {{ template "jenkins.fullname" . }}
         servicePort: 8080
+      path: /
+      pathType: Prefix
     tls:
       - secretName: ci.dev.compliantcloud.com
         hosts:

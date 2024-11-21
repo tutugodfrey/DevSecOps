@@ -17,8 +17,8 @@ controller:
     - backend:
         serviceName: jenkins
         servicePort: 8080
-    path: /
-    pathType: ImplementationSpecific
+      path: /
+      pathType: ImplementationSpecific
     tls:
       - secretName: ci.dev.compliantcloud.com
         hosts:

@@ -12,7 +12,7 @@ controller:
     ingressClassName: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
-    hostName: ci.dev.compliantcloud.comx
+    hostName: ci.dev.compliantcloud.com
     paths:
       - backend:
           service:

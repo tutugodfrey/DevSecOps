@@ -15,8 +15,7 @@ controller:
     hostName: ci.dev.compliantcloud.comx
     paths:
     - backend:
-        serviceName: >-
-          {{ template "jenkins.fullname" . }}
+        serviceName: jenkins
         servicePort: 8080
       path: /
       pathType: ImplementationSpecific

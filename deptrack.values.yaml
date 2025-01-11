@@ -1,0 +1,26 @@
+ingress:
+  enabled: true
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  hosts:
+    - host: dependencytrack.dev.compliantcloud.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    enabled: true
+    secretName: dependencytrack.dev.compliantcloud.com
+
+frontend:
+  replicaCount: 1
+  service:
+    type: NodePort
+apiserver:
+  resources:
+    requests:
+      cpu: 1
+      memory: 3000Mi
+    limits:
+      cpu: 2
+      memory: 7000Mi
+  

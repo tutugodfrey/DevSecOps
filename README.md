@@ -25,3 +25,10 @@ Get Jenkins initial admin Password
 printf $(kubectl get secret --namespace ci jenkins -ojsonpath="{.data.jenkins-admin-password}" | base64 --decode); echo
 ```
 
+### Create docker registry secret
+
+```bash
+kubectl create secret -n ci docker-registry regcred --docker-server=https://index.docker.io/v1/  --docker-username=xxxxxx --docker-password=yyyyyy --docker-email=xyz@abc.org
+
+kubectl create secret -n ci docker-registry regcred --docker-server=https://index.docker.io/v1/  --docker-username=tutug --docker-password=replace-with-docker-personal-access-token --docker-email=godfrey_tutu@yahoo.com
+```

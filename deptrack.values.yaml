@@ -1,0 +1,23 @@
+ingress:
+  enabled: true
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  hostname: dependencytrack.dev.compliantcloud.com
+  ingressClassName: "nginx"
+  tls:
+   - secretName: dependencytrack.dev.compliantcloud.com
+     hosts:
+       - dependencytrack.dev.compliantcloud.com
+frontend:
+  replicaCount: 1
+  service:
+    type: NodePort
+apiserver:
+  resources:
+    requests:
+      cpu: 1
+      memory: 3000Mi
+    limits:
+      cpu: 2
+      memory: 7000Mi
+  

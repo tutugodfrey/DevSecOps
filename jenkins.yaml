@@ -1,0 +1,21 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations:
+    sealedsecrets.bitnami.com/cluster-wide: "true"
+  creationTimestamp: null
+  name: jenkins
+  namespace: ci
+spec:
+  encryptedData:
+    jenkins-admin-password: AgCkFMETfUFMMxyk6K3lT5oVnvKyLuTmx5+O8uGlssEBmO949QXM1a4tn2NUQdx56AQsJQYIPg4llq5h2QYlQ7vhWs9CG7NDudsewgOnVVb/jn6jigcntYJvqxjHkMLOu6YU+5iFqHdzi9cmDPIVPnhn65K1oGpKL6qGMDbBbkCYM1GrDOIIT1LX0fPo+aD2hqt/zhx3chmPU/gLi/pTJ6odyYGcLU/E3FUbjH7qWNiyc2OHvA9aobS+MrEjcW3gBJhy0lYbMiRkHM8RqEk/SqIwxEIZD+Ab6sXLiVyqIDXG6Szxy6c0be79U1PehWIceTG2eCY7XGalOTBIugcT7i6tcxDHcglUGSru3MI91QE8XJf0OAlz3yYJAuUowz+uKxHMbneKORYbEaGbW1MNvV1Eh6c1yVtoBfwO9UTsicWovxEfUMYXk7Thm5xyuBSvIY5feb10DGVn0BanMW+bgFZ7Ss+lukt70Bi7AF5H2FUde9w9MzRmZrdUqE8apAat9ugiQXv6qzDYcNBWUK6HmMDruQW+nhJikAki5v4TxyIRyTOox7t+Pof4lXAxvnbl3lWAytE4DxBh0M1FXChNLpoNjsghu8hzZ31x/i+paARnpYu5BRy8OZhX+wC2zLmKiNZcMPrgeGzg8tb+GTS7oVkoTM7TIWcdnyGwzAUVzemEdk7y83eC3O3AIBnDdtatUQ7G9c3FRtjLyw4RiGuh
+    jenkins-admin-user: AgCtu1Sqo2/DLUnTGgoWQDsfUxeLLgiYg+QbkKjlJroIqVwCfMcb0RlV2xGDS/zMg8KW1JcxCLzk6n9VYQb7DxAY5VBwLgBCZGW7paFGYuoKHvvkcwW47GeSfcTzSXJl6HDmum0bPqLB+n94su+mvYBTNthUsm8PIJ7KHnEPK+Z+NECaiU0CVZfVbfmgv+dglG0jLhKbWiHkazgX1UyCLma6t8vOtG2cA4cpSb15Dg/Zw9jIE0MjwZLvEafpTVuHvBxsC3vcIUbpeW9Bbsfl3ebrzv5n0xfGzOIa1UqzUvwWE4mwj3L7u82Z/x41UYBC0PvWG4mOal45fMk7tSbnpgnRDXVhn3frIvVifHzkzQJXrff4Yu79Pmg39ijqKKY8WQP0ng6iyWri9Pc7jT1FFSVIbkZp3IzaArMra/EM000MPoGDA/fcGANma6qafZhJSg29P8D8pMGidqkyIKxKvdYHW08yBAbh36WbFO4SPTWJHAJTtEHIXfVoAI1PjoJRvDB2ii5S8/RGNB7VXYlaLVXPXmDB1q3nU6Fuzt9S3Io4yUYQWIwtugwSUVVM1HudBIrLLRFU+ZjibVnnAFiFx2IQsHUlpJy/sJIGGF54sRqVFctEtG6Jnf+LTIfLqZP65LIGWTdlg9MEV5ViT1DckPJBtBcloQ/R1KrZEKRmnP40YWGpQodGP3Us6nxwLZatvbvYYR0gdg==
+  template:
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/cluster-wide: "true"
+      creationTimestamp: null
+      name: jenkins
+      namespace: ci
+    type: Opaque

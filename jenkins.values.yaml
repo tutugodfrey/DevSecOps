@@ -1,4 +1,8 @@
+# https://github.com/jenkinsci/helm-charts/blob/main/charts/jenkins/values.yaml
+
 controller:
+  admin:
+    existingSecret: jenkins
   serviceType: NodePort
   resources:
     requests:
@@ -25,6 +29,11 @@ controller:
       - secretName: ci.dev.compliantcloud.com
         hosts:
           - ci.dev.compliantcloud.com
+  installPlugins:
+    - kubernetes:4358.vcfd9c5a_0a_f51
+    - workflow-aggregator:608.v67378e9d3db_1
+    - git:5.7.0
+    - configuration-as-code:1985.vdda_32d0c4ea_b_
   # nodeSelector:
   #   kubernetes.io/os: linux
   # tolerations:

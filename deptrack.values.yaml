@@ -2,11 +2,12 @@ ingress:
   enabled: true
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-  host: dependencytrack.dev.compliantcloud.com
+  hostname: dependencytrack.dev.compliantcloud.com
+  ingressClassName: "nginx"
   tls:
-    enabled: true
-    secretName: dependencytrack.dev.compliantcloud.com
-
+   - secretName: dependencytrack.dev.compliantcloud.com
+     hosts:
+       - dependencytrack.dev.compliantcloud.com
 frontend:
   replicaCount: 1
   service:
